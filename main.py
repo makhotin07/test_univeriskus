@@ -32,6 +32,7 @@ async def determine_mood(text: str) -> str:
     return response.choices[0].message.content.lower()
 
 
+
 async def mood_request(text: str) -> str:
     mood = await determine_mood(text)
     if 'хороший' in mood:
